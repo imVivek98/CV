@@ -3,31 +3,78 @@
   <head>
     <meta charset="utf-8">
     <title>Vivek's new Webpage</title>
-  </head>
-  <body>
-      <table cellspacing = "20">
-        <tr>
-          <td>  <img src = "https://github.com/imVivek98/CV/blob/main/Photos/Vivek.JPEG?raw=true" alt = "Vivek's image" width = "140" height = "140"/></td>
-          <td><h1>Vivek Krishnan.R </h1>
-           <p>
-               <a href = "https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287450#overview">Full stack web developer.</a>
-           </p>
-           <p>I'm a full stack web developer looking for opportunities to test myself.I'm currently in the process of completing my engineering degree.</p>
-           <hr size="3" noshade />
-         </td>
-        </tr>
-      </table>
+    <link rel="stylesheet" href="../CSS/styles.css">
+  <!-- link tag is used to link the css file to anhtml file.It lets the html file
+   be styled as per the code in the styles.css file.-->
+  <!--When we use internal styling , this affects only the current index.html file
+   and the other contact.html and hobbies.html remain unaffected and we may have to
+   copy paste code.This is difficult when we have large number of websites to style.
+   So we use external styling where we have a separate CSS file that affects changes
+    accross the board in all websites-->
+  <!--  <style>
+       body{
+         background-color:#DFF6FF;
+       }
 
+       hr{
+         border-color:#DFDFDE;
+         border-style:none;
+         height:0px;
+         border-style: none;
+         border-top-style: dotted;
+         width: 10%;
+         border-width: 5px;
+       }
+    </style> -->
+
+    <!--We put the style tag inside the head tag.To change the style of any
+     element , we have to specify the name of the element we want to change,
+     set a pair of curly braces and inside the curly braces write the CSS code
+      to specify the style of the element. -->
+  </head>
+  <!--body style="background-color: Pink"       -> When you use the hexadecimal value of a color ,
+                                                   always put a #symbol infront of it.-->
+  <!-- body style="background-color: #C689C6;"    -> This is called inline CSS styling.Instead of doing even this ,
+                                                     using the style tag and formatting the CSS inside the tags is
+                                                    called internal CSS styling.-->
+    <!-- Style element is used to specify CSS code and here we have changed the
+     background color to pink.The pigment plugin highlights the hexvalue to show
+      us which color we have chosen-->
+    <!-- This method of styling within html tags is inefficient and can cause errors.
+    So it is not usually prefered.Hence we use internal or external styling.-->
+    <table cellspacing = "20">
+        <tr>
+          <td>  <img class="OwnImage circular" src = "/Users/vivek/Desktop/Web Development/Photos/Vivek.JPEG" alt = "Vivek's image" ></td>
+          <td><h1 id="Heading">Vivek Krishnan.R </h1>
+          <td> <img class="Mac" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/laptop_1f4bb.png" alt="Image of a Macbook , my prefered weapon of choice."></td>
+          <td><img class="Windows circular" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/313/laptop_1f4bb.png" alt="I hate windows laptops." ></td>
+        </tr>
+        <tr>
+          <td>
+             <p>
+              <a href = "https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12287450#overview">Full stack web developer.</a>
+             </p>
+        </td>
+        <td>
+          <p id="Main-Desc">I'm a full stack web developer looking for opportunities to test myself.I'm currently in the process of completing my engineering degree.</p>
+          <hr>
+        </td>
+        </tr>
+
+
+
+      </table>
 
 
       <h3><strong>Education :</strong></h3>
       <h4>Degree in Computer Science and Engineering</h4>
       <ul>
         <li>The complete Web development bootcamp</li>
+        <li>The complete mobile developer bootcamp</li>
       </ul>
-      <hr noshade >
+      <hr>
 
-      <h2><strong>Experience</strong></h2>
+      <h3><strong>Experience :</strong></h3>
 
       <table cellspacing = "20">
         <thead>
@@ -48,8 +95,8 @@
         </tbody>
       </table>
 
-      <hr noshade>
-      <h3><strong>Skills</strong></h3>
+      <hr>
+      <h3><strong>Skills :</strong></h3>
       <table cellspacing = "30">
         <tr>
           <td>HTML</td>
@@ -64,7 +111,7 @@
           <td>★★★★☆</td>
         </tr>
       </table>
-      <hr noshade>
+      <hr>
       <br>
       <a href="hobbies.html">My hobbies</a>
       <br>
