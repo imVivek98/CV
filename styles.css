@@ -1,0 +1,86 @@
+/*While styling, refer to the attributes in CSS w3 schools or mdn docs*/
+/* The precedence for css is : Inline CSS > Internal CSS > External CSS, We can
+ untick the preference on Chrome using Developer Tools.But it does not change the
+  code and hence the changes applied will only be local.It is best practice to
+  put all your CSS code in an external CSS file*/
+
+/* ************************* TAG SELECTORS ******************************/
+   body{
+     background-color:#DFF6FF;   /*No need of the style tag since this is a CSS
+                                  file.Only use the style tag while styling inside
+                                  an HTML file*/
+   }
+
+   hr{
+     border-color:#DFDFDE;
+     /*height:0px;        no need to specify height since it is zero.
+                          Height is specified as border is a box with top,bottom,left and right*/
+     border-style: none;
+     border-top-style: dotted;
+     width: 10%;  /*The width is specified to be 10% of the screen.So it can
+                   adjust according to the screen size.(i.e laptop,mobiles etc) */
+     border-width: 5px; /*The border-width on the other hand specifies the width
+                         of the border line it self*/
+   }
+/*h1{color:#66BFBF; font-size:30px }       -> Not good practice*/
+
+h1
+{
+  color:#66BFBF;   /*Also it is good practice to put all your properties in
+                    the alphabetical order so that it is easier to debug*/
+  font-size:30px;
+}
+h3{color:#66BFBF;}
+
+img:hover{   /*This is called a pseudo-class. We can specify the bahaviour of a tag under a particular condition*/
+  background-color: gold;
+}
+
+/*We can't style each image by just usng a tag selector as all
+changes will reflect on every image and not just th eimage that
+we want to style.Hence we use class selectors.We can use classes
+for any sort of tag to differentiate it and style it differently.
+img{
+  background-color: red;
+}
+*/
+/* ***************************** CLASS SELECTORS *****************************/
+
+.OwnImage{   /*T target a class , the only difference is to put a full stop infront of the selector*/
+  width: 140px;
+  height: 140px;
+}
+
+.Mac{
+  width: 140px;
+  height: 140px;
+  background-color: #F6FBF4;
+}
+
+.Windows{
+  width: 140px;
+  height: 140px;
+  background-color: #EEEEEE;
+}
+
+.circular{
+  border-radius: 100%; /*Means image is rendered circular*/
+}
+/* We have used this class on two img tags as per requirement */
+/* ****************************** ID SELECTORS *******************************/
+
+#Heading{
+  color: #95D1CC;
+}
+
+#Main-Desc{
+  text-shadow: 1px 2px 1px black;
+}
+
+/*ID's are used only when there is a single one of them.We can use the same class
+for many different elements but there can only be one tag with the ID heading in
+the html file.So , class can be used to group related elements with the same style.
+id is used only for unique elements.Here , we can use the class circular many
+times but the id is used to make changes on a unique tag. */
+/* You also can't have more than one id for a particular element*/
+/*Use ID's sparingly and only for important tags*/
